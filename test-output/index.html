@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Default_suite" class="navigator-link">
-              <span class="suite-name border-passed">Default suite</span>
+              <span class="suite-name border-failed">Default suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\2122119\AppData\Local\Temp\1\testng-eclipse--457890844\testng-customsuite.xml</span>
+                    <span>C:\Users\2122119\AppData\Local\Temp\1\testng-eclipse-2010136913\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,7 +92,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">3 methods, 1 failed,   2 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Default_suite" class="hide-methods failed suite-Default_suite"> (hide)</a> <!-- hide-methods failed suite-Default_suite -->
+                      <a href="#" panel-name="suite-Default_suite" class="show-methods failed suite-Default_suite"> (show)</a> <!-- show-methods failed suite-Default_suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Default_suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="cucumberOptions.TestNGRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Search Experience for product in both home and offers page&quot;, &quot;Search and place the order for produc...)">runScenario("Search Experience for product in both home and offers page", "Search and place the order for produc...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Default_suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -101,6 +115,11 @@
                       <a href="#" panel-name="suite-Default_suite" class="show-methods passed suite-Default_suite"> (show)</a> <!-- show-methods passed suite-Default_suite -->
                     </span>
                     <div class="method-list-content passed suite-Default_suite">
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="cucumberOptions.TestNGRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Add Product to cart and verify that the same product is on the checkout page&quot;, &quot;Validating the Chec...)">runScenario("Add Product to cart and verify that the same product is on the checkout page", "Validating the Chec...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Default_suite" title="cucumberOptions.TestNGRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Search Experience for product in both home and offers page&quot;, &quot;Search and place the order for produc...)">runScenario("Search Experience for product in both home and offers page", "Search and place the order for produc...)</a> <!-- method navigator-link -->
@@ -118,12 +137,51 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Default_suite" class="panel Default_suite">
+          <div class="suite-Default_suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">cucumberOptions.TestNGRunner</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Search Experience for product in both home and offers page&quot;, &quot;Search and place the order for produc...)">
+                  </a> <!-- runScenario("Search Experience for product in both home and offers page", "Search and place the order for produc...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Search Experience for product in both home and offers page","Search and place the order for products")</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [No data] but found [Beetroot]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at stepDefinitions.TopDealsStepDefs.validate_product_name_in_offers_page_matches_with_landing_page(TopDealsStepDefs.java:30)
+	at ✽.validate product name in offers page matches with landing page(file:///C:/Users/2122119/eclipse-workspace/CucumberFramework/src/test/java/features/searchProduct.feature:8)
+
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Default_suite-class-failed -->
           <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
               <span class="class-name">cucumberOptions.TestNGRunner</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Add Product to cart and verify that the same product is on the checkout page&quot;, &quot;Validating the Chec...)">
+                  </a> <!-- runScenario("Add Product to cart and verify that the same product is on the checkout page", "Validating the Chec...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Add Product to cart and verify that the same product is on the checkout page","Validating the Checkout feature")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
                   <a name="runScenario(&quot;Search Experience for product in both home and offers page&quot;, &quot;Search and place the order for produc...)">
@@ -139,7 +197,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\2122119\AppData\Local\Temp\1\testng-eclipse--457890844\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\2122119\AppData\Local\Temp\1\testng-eclipse-2010136913\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -196,16 +254,24 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(3);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'runScenario')
 data.setCell(0, 2, 'cucumberOptions.TestNGRunner')
-data.setCell(0, 3, 6519);
+data.setCell(0, 3, 19815);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'runScenario')
+data.setCell(1, 2, 'cucumberOptions.TestNGRunner')
+data.setCell(1, 3, 13806);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'runScenario')
+data.setCell(2, 2, 'cucumberOptions.TestNGRunner')
+data.setCell(2, 3, 13744);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 6 seconds</span>
+              <span class="suite-total-time">Total running time: 47 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -233,16 +299,26 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">cucumberOptions.TestNGRunner</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
-                <span class="method-name">setUpClass(org.testng.TestRunner@433c6abb)</span>
+                <span class="method-name">setUpClass(org.testng.TestRunner@26a4551a)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
+                <span class="method-name">runScenario("Add Product to cart and verify that the same product is on the checkout page", "Validating the Chec...)</span>
+                <span class="method-start">912 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">runScenario("Search Experience for product in both home and offers page", "Search and place the order for produc...)</span>
-                <span class="method-start">494 ms</span>
+                <span class="method-start">912 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Search Experience for product in both home and offers page", "Search and place the order for produc...)</span>
+                <span class="method-start">912 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownClass</span>
-                <span class="method-start">7017 ms</span>
+                <span class="method-start">20731 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

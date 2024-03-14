@@ -2,7 +2,7 @@ package utils;
 
 import pageObjects.PageObjectManager;
 
-//Variable inside this class will share all its variables across project -> this is with use of picocontainser
+//Variable inside this class will share all its variables across project -> this is with use of picocontainer
 //We need to create a constructor inside all the stepdefs classes and pass the object of this class.
 public class TestContextSetup {
 //	public WebDriver driver;

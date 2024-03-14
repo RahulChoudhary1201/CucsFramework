@@ -23,9 +23,9 @@ public class GreenKartStepDefs {
 	
 	
 	
-	@When("user searched with short name {string} and extract actual name of product")
+	@When("^user searched with short name (.+) and extract actual name of product$")
 	public void user_searched_with_short_name_and_extract_actual_name_of_product(String value) {
-		GreenKart green = testContextSetup.pageObjectManager.getGreenKartObject();
+		GreenKart green = testContextSetup.pageObjectManager.getGreenkartPageObject();
 		green.searchProduct(value);
 		testContextSetup.homePageProductName = green.getDisplayedProductName().split("-")[0].trim();
 		System.out.println(testContextSetup.homePageProductName);
